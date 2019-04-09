@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/LoginForm/LoginForm.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/header.jpg');">
+			<div class="wrap-login100">
+				
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						تسجيل الدخول 
+					</span>
+
+					<div class="wrap-input100 validate-input" >
+						<input class="input100" type="text"  placeholder="اسم المستخدم" id="userNmaeValue">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="pass" placeholder="كلمة السر" id="passwordLoginValue">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+					<div class="contact100-form-checkbox">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							تذكير
+						</label>
+						
+						<a class="txt1" href="#">
+							هل نسيت كلمة السر؟
+						</a>
+					
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" id="btnLogin">
+							دخول
+						</button>
+					</div>
+
+					<a class="txt1" href="#">
+							حساب جديد
+						</a>
+				
+			</div>
+		</div>
+	</div>
+	
+
+	
+	
+	
+<script src="library/Jquery/jquery-3.3.1.min.js"></script>
+	
+	
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-functions.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+  
+  <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyCDdFntWPlXwpWubU_rOCdt49pDi_MrSdw",
+    authDomain: "wasaln-cc5a9.firebaseapp.com",
+    databaseURL: "https://wasaln-cc5a9.firebaseio.com",
+    projectId: "wasaln-cc5a9",
+    storageBucket: "wasaln-cc5a9.appspot.com",
+    messagingSenderId: "939431771474"
+  };
+  firebase.initializeApp(config);
+    
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const functions = firebase.functions();
+	var database = firebase.database();
+
+    // update firestore settings
+    db.settings({ timestampsInSnapshots: true });
+	
+	var b= firebase.database().ref().child("users").push();
+	var registerObject=firebase.database().ref().child("users");
+	//var x=firebase.database().ref().child("users").child(7).child("arr");
+	
+	/*x.set({0:"bbb",1:"aaa"});*/
+  </script>
+<script src="js/LoginForm/LoginForm.js"></script>
+
+</body>
+</html>

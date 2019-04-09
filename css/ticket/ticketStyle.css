@@ -1,0 +1,65 @@
+.ticket {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+  background:rgba(64,64,64,0.9);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+.ticketContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: rgba(64, 64, 64,1);
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+  color: #fff;
+}
+.headOfTicket{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.containerOfTicket{
+    width: 100%;
+    height: auto;
+}
+.rightTicket{
+    width: 49%;
+    height: auto;
+    float: right;
+    border-left: solid 1px #fff;
+}
+.leftTicket{
+     width: 49%;
+    height: auto;
+    float: left;
+}
+.itemOfTicket{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.rightTicket .itemOfTicket{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    
+}
+.leftTicket .itemOfTicket{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
